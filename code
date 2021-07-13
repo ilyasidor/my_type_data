@@ -1,0 +1,52 @@
+struct my_int
+    {
+        private int integer_x;
+        public static implicit operator my_int(int _x)
+        {
+            return new my_int { integer_x = _x };
+        }
+        public static explicit operator int(my_int count)
+        {
+            return count.integer_x;
+        }
+        public static int operator +(my_int x, int y)
+        {
+            return x.integer_x + y;
+        }
+        public static int operator +(int y,my_int x)
+        {
+            return y + x.integer_x;
+        }
+        public static int operator %(int y, my_int x)
+        {
+            return y % x.integer_x;
+        }
+        public static int operator %(my_int x, int y)
+        {
+            return x.integer_x % y;
+        }
+        public static int operator *(int y, my_int x)
+        {
+            return y * x.integer_x;
+        }
+        public static int operator *(my_int x, int y)
+        {
+            return x.integer_x * y;
+        }
+        public static int operator -(my_int x,int y)
+        {
+            return x.integer_x - y;
+        }
+        public static int operator -(int y, my_int x)
+        {
+            return y - x.integer_x;
+        }
+        public static int operator /(my_int x, int y)
+        {
+            return x.integer_x / y;
+        }
+        public static int operator /(int y, my_int x)
+        {
+            return y/x.integer_x;
+        }
+    }
